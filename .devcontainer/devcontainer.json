@@ -1,6 +1,24 @@
 {
     "image": "mcr.microsoft.com/devcontainers/universal:2",
     "features": {
-        "ghcr.io/ddev/ddev/install-ddev:latest": {}
+        "ghcr.io/ddev/ddev/install-ddev:latest": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "eamodio.gitlens",
+                "biati.ddev-manager"
+            ]
+        }
+    },
+    "forwardPorts": [8080],
+
+    "hostRequirements": {
+        "cpus": 2,
+        "memory": "8gb",
+        "storage": "32gb"
     }
 }
